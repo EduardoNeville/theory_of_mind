@@ -1,0 +1,489 @@
+actions,question,answer,question_type,story_type,gpt_prompt,gpt_response,gpt_answer
+"1 Olivia entered the garage.
+2 Mason entered the garage.
+3 Olivia loves the persimmon
+4 The pumpkin is in the bucket.
+5 Mason exited the garage.
+6 Olivia moved the pumpkin to the basket.
+7 Olivia exited the garage.
+8 Olivia hates the tie
+9 Evelyn entered the garage.
+10 Evelyn exited the garage.
+11 Mason entered the basement.",12 Where does Mason think that Olivia searches for the pumpkin?,bucket,second_order_1_tom,second_order_false_belief,"You are a highly analytical, detail-oriented assistant.
+    
+    Below is a series of observations, in the order they occurred, followed by a question.  Your job is to analyze the observations carefully and then answer the question. 
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, while in the presence of other characters, all other characters present will observe that movement
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occurred in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  You may explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Olivia entered the garage.
+2 Mason entered the garage.
+3 Olivia loves the persimmon
+4 The pumpkin is in the bucket.
+5 Mason exited the garage.
+6 Olivia moved the pumpkin to the basket.
+7 Olivia exited the garage.
+8 Olivia hates the tie
+9 Evelyn entered the garage.
+10 Evelyn exited the garage.
+11 Mason entered the basement.
+
+Question:
+12 Where does Mason think that Olivia searches for the pumpkin?
+
+Begin.
+    ","<reasoning>
+1. Olivia and Mason are both in the garage at the same time.
+2. Olivia loves the persimmon, but this information is not relevant to the question.
+3. The pumpkin is in the bucket, and since both Olivia and Mason are in the garage, they both know this.
+4. Mason exits the garage.
+5. Olivia moves the pumpkin to the basket, but Mason is not in the garage to observe this action.
+6. Olivia exits the garage.
+7. Evelyn enters and exits the garage, but this information is not relevant to the question.
+8. Mason enters the basement, but this information is not relevant to the question.
+
+Since Mason was not present when Olivia moved the pumpkin from the bucket to the basket, he still believes the pumpkin is in the bucket.
+</reasoning>
+<answer>bucket</answer>",bucket
+"1 Mia entered the living_room.
+2 Jack entered the living_room.
+3 The cabbage is in the crate.
+4 Sophia entered the living_room.
+5 Sophia exited the living_room.
+6 Mia moved the cabbage to the envelope.
+7 Jack exited the living_room.",8 Where was the cabbage at the beginning?,crate,memory,true_belief,"You are a highly analytical, detail-oriented assistant.
+    
+    Below is a series of observations, in the order they occurred, followed by a question.  Your job is to analyze the observations carefully and then answer the question. 
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, while in the presence of other characters, all other characters present will observe that movement
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occurred in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  You may explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Mia entered the living_room.
+2 Jack entered the living_room.
+3 The cabbage is in the crate.
+4 Sophia entered the living_room.
+5 Sophia exited the living_room.
+6 Mia moved the cabbage to the envelope.
+7 Jack exited the living_room.
+
+Question:
+8 Where was the cabbage at the beginning?
+
+Begin.
+    ","<reasoning>The cabbage's location was first mentioned in observation 3, stating that ""the cabbage is in the crate."" Since there is no prior mention of the cabbage's location or any action involving the cabbage before this observation, we can assume that the cabbage was in the crate at the beginning.</reasoning>
+<answer>crate</answer>",crate
+"1 Jayden loves the plum
+2 Jayden likes the radish
+3 Jayden entered the closet.
+4 Mila entered the closet.
+5 The watermelon is in the envelope.
+6 Jayden moved the watermelon to the drawer.
+7 Mila exited the closet.",8 Where was the watermelon at the beginning?,envelope,memory,true_belief,"You are a highly analytical, detail-oriented assistant.
+    
+    Below is a series of observations, in the order they occurred, followed by a question.  Your job is to analyze the observations carefully and then answer the question. 
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, while in the presence of other characters, all other characters present will observe that movement
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occurred in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  You may explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Jayden loves the plum
+2 Jayden likes the radish
+3 Jayden entered the closet.
+4 Mila entered the closet.
+5 The watermelon is in the envelope.
+6 Jayden moved the watermelon to the drawer.
+7 Mila exited the closet.
+
+Question:
+8 Where was the watermelon at the beginning?
+
+Begin.
+    ","<reasoning>
+Let's analyze the observations in order:
+1. Jayden loves the plum - This observation is not relevant to the watermelon's location.
+2. Jayden likes the radish - This observation is not relevant to the watermelon's location.
+3. Jayden entered the closet - Jayden is now in the closet.
+4. Mila entered the closet - Mila is now in the closet with Jayden.
+5. The watermelon is in the envelope - This observation tells us the initial location of the watermelon, which is in the envelope.
+6. Jayden moved the watermelon to the drawer - Since Jayden is in the closet, and he moved the watermelon, it means the watermelon was also in the closet. Jayden moved it from the envelope to the drawer, which are both in the closet.
+7. Mila exited the closet - Mila is no longer in the closet, but this observation does not affect the watermelon's location.
+
+Based on these observations, the watermelon was initially in the envelope, which is located in the closet.
+</reasoning>
+<answer>envelope</answer>",envelope
+"1 Carter entered the office.
+2 Ethan entered the den.
+3 Abigail entered the office.
+4 The persimmon is in the bathtub.
+5 Abigail exited the office.
+6 Carter moved the persimmon to the suitcase.",7 Where was the persimmon at the beginning?,bathtub,memory,false_belief,"You are a highly analytical, detail-oriented assistant.
+    
+    Below is a series of observations, in the order they occurred, followed by a question.  Your job is to analyze the observations carefully and then answer the question. 
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, while in the presence of other characters, all other characters present will observe that movement
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occurred in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  You may explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Carter entered the office.
+2 Ethan entered the den.
+3 Abigail entered the office.
+4 The persimmon is in the bathtub.
+5 Abigail exited the office.
+6 Carter moved the persimmon to the suitcase.
+
+Question:
+7 Where was the persimmon at the beginning?
+
+Begin.
+    ","<reasoning>
+Let's analyze the observations in order:
+1. Carter entered the office. (Carter is in the office)
+2. Ethan entered the den. (Ethan is in the den)
+3. Abigail entered the office. (Abigail is in the office with Carter)
+4. The persimmon is in the bathtub. (This observation is known to all characters)
+5. Abigail exited the office. (Abigail is no longer in the office)
+6. Carter moved the persimmon to the suitcase. (Carter must have gone to the location of the persimmon to move it, which means he went to the bathtub)
+
+Since Carter moved the persimmon to the suitcase, he must have been in the location where the persimmon was initially. The only location mentioned for the persimmon is the bathtub. Therefore, the persimmon was in the bathtub at the beginning.
+</reasoning>
+<answer>bathtub</answer>",bathtub
+"1 Aria entered the garden.
+2 Abigail entered the garden.
+3 Aria hates the t-shirt
+4 The carrot is in the treasure_chest.
+5 Aria exited the garden.
+6 Abigail moved the carrot to the basket.
+7 Abigail exited the garden.
+8 Aria entered the garden.
+9 Ava entered the attic.",10 Where does Aria think that Abigail searches for the carrot?,treasure_chest,second_order_0_tom,second_order_false_belief,"You are a highly analytical, detail-oriented assistant.
+    
+    Below is a series of observations, in the order they occurred, followed by a question.  Your job is to analyze the observations carefully and then answer the question. 
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, while in the presence of other characters, all other characters present will observe that movement
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occurred in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  You may explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Aria entered the garden.
+2 Abigail entered the garden.
+3 Aria hates the t-shirt
+4 The carrot is in the treasure_chest.
+5 Aria exited the garden.
+6 Abigail moved the carrot to the basket.
+7 Abigail exited the garden.
+8 Aria entered the garden.
+9 Ava entered the attic.
+
+Question:
+10 Where does Aria think that Abigail searches for the carrot?
+
+Begin.
+    ","<reasoning>
+1. Aria entered the garden, so she is aware of the garden's contents.
+2. Abigail entered the garden, so Aria knows Abigail is in the garden.
+3. Aria hates the t-shirt, but this information is not relevant to the question.
+4. The carrot is in the treasure_chest. Aria is in the garden and knows the carrot's location.
+5. Aria exited the garden. She is no longer aware of the events happening in the garden.
+6. Abigail moved the carrot to the basket. Aria is not in the garden and is unaware of this action.
+7. Abigail exited the garden. Aria is not in the garden and is unaware of this action.
+8. Aria entered the garden. She is now aware of the garden's contents again, but she has not observed the carrot's new location.
+9. Ava entered the attic. This information is not relevant to the question.
+
+Since Aria was not in the garden when Abigail moved the carrot, she still believes the carrot is in the treasure_chest. Therefore, Aria would think that Abigail searches for the carrot in the treasure_chest.
+</reasoning>
+<answer>treasure_chest</answer>",treasure_chest
+"1 Logan entered the bathroom.
+2 Isla entered the bathroom.
+3 Noah entered the bathroom.
+4 The persimmon is in the bathtub.
+5 Isla exited the bathroom.
+6 Noah moved the persimmon to the envelope.
+7 Logan exited the bathroom.
+8 Noah exited the bathroom.
+9 Isla entered the living_room.",10 Where does Noah think that Isla searches for the persimmon?,bathtub,second_order_1_tom,second_order_false_belief,"You are a highly analytical, detail-oriented assistant.
+    
+    Below is a series of observations, in the order they occurred, followed by a question.  Your job is to analyze the observations carefully and then answer the question. 
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, while in the presence of other characters, all other characters present will observe that movement
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occurred in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  You may explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Logan entered the bathroom.
+2 Isla entered the bathroom.
+3 Noah entered the bathroom.
+4 The persimmon is in the bathtub.
+5 Isla exited the bathroom.
+6 Noah moved the persimmon to the envelope.
+7 Logan exited the bathroom.
+8 Noah exited the bathroom.
+9 Isla entered the living_room.
+
+Question:
+10 Where does Noah think that Isla searches for the persimmon?
+
+Begin.
+    ","<reasoning>
+1. Logan, Isla, and Noah are all in the bathroom together.
+2. The persimmon is observed to be in the bathtub while all three are present.
+3. Isla leaves the bathroom before any changes are made to the persimmon's location.
+4. Noah moves the persimmon to the envelope while Logan is still present.
+5. Logan and Noah leave the bathroom, and Isla enters the living room.
+
+Since Isla left the bathroom before the persimmon was moved, she would still believe it to be in the bathtub. Noah is aware that Isla left before he moved the persimmon, so he would think that Isla would search for the persimmon in its last known location to her, which is the bathtub.
+</reasoning>
+<answer>bathtub</answer>",bathtub
+"1 Mia entered the hall.
+2 Emma entered the hall.
+3 The grapes is in the bucket.
+4 Mia exited the hall.
+5 Ella entered the attic.
+6 Ella hates the beans
+7 Ella exited the attic.
+8 Emma moved the grapes to the container.",9 Where does Emma think that Mia searches for the grapes?,bucket,second_order_1_tom,false_belief,"You are a highly analytical, detail-oriented assistant.
+    
+    Below is a series of observations, in the order they occurred, followed by a question.  Your job is to analyze the observations carefully and then answer the question. 
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, while in the presence of other characters, all other characters present will observe that movement
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occurred in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  You may explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Mia entered the hall.
+2 Emma entered the hall.
+3 The grapes is in the bucket.
+4 Mia exited the hall.
+5 Ella entered the attic.
+6 Ella hates the beans
+7 Ella exited the attic.
+8 Emma moved the grapes to the container.
+
+Question:
+9 Where does Emma think that Mia searches for the grapes?
+
+Begin.
+    ","<reasoning>
+1. Mia entered the hall before Emma, so Emma knows Mia is in the hall.
+2. Emma entered the hall and observed that the grapes are in the bucket.
+3. Mia exited the hall, but Emma did not see her leave since Emma was still in the hall.
+4. Emma moved the grapes to the container while in the hall.
+5. Since Emma did not see Mia leave the hall, she would assume that Mia is still in the hall and would search for the grapes there.
+</reasoning>
+<answer>hall</answer>",hall
+"1 Lily entered the back_yard.
+2 Hannah entered the back_yard.
+3 The apple is in the suitcase.
+4 Hannah exited the back_yard.
+5 Jacob likes the lettuce
+6 Lily moved the apple to the drawer.
+7 Lily hates the socks",8 Where does Lily think that Hannah searches for the apple?,suitcase,second_order_0_tom,false_belief,"You are a highly analytical, detail-oriented assistant.
+    
+    Below is a series of observations, in the order they occurred, followed by a question.  Your job is to analyze the observations carefully and then answer the question. 
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, while in the presence of other characters, all other characters present will observe that movement
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occurred in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  You may explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Lily entered the back_yard.
+2 Hannah entered the back_yard.
+3 The apple is in the suitcase.
+4 Hannah exited the back_yard.
+5 Jacob likes the lettuce
+6 Lily moved the apple to the drawer.
+7 Lily hates the socks
+
+Question:
+8 Where does Lily think that Hannah searches for the apple?
+
+Begin.
+    ","<reasoning>
+Lily and Hannah were both in the back_yard at the beginning (actions 1 and 2). At this point, neither of them knows the location of the apple, as the information about the apple being in the suitcase (action 3) was not observed by them. Hannah then exited the back_yard (action 4) before Lily moved the apple to the drawer (action 6). Since Hannah was not present when Lily moved the apple, she is unaware of the new location of the apple. Therefore, Lily would think that Hannah still searches for the apple in its original location, which is the suitcase.
+</reasoning>
+<answer>suitcase</answer>",suitcase
+"1 James entered the playroom.
+2 Oliver entered the playroom.
+3 Nathan entered the playroom.
+4 The underclothes is in the bottle.
+5 Nathan exited the playroom.
+6 James moved the underclothes to the treasure_chest.
+7 Oliver exited the playroom.
+8 James exited the playroom.
+9 Oliver entered the playroom.",10 Where does James think that Oliver searches for the underclothes?,treasure_chest,second_order_0_no_tom,second_order_false_belief,"You are a highly analytical, detail-oriented assistant.
+    
+    Below is a series of observations, in the order they occurred, followed by a question.  Your job is to analyze the observations carefully and then answer the question. 
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, while in the presence of other characters, all other characters present will observe that movement
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occurred in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  You may explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 James entered the playroom.
+2 Oliver entered the playroom.
+3 Nathan entered the playroom.
+4 The underclothes is in the bottle.
+5 Nathan exited the playroom.
+6 James moved the underclothes to the treasure_chest.
+7 Oliver exited the playroom.
+8 James exited the playroom.
+9 Oliver entered the playroom.
+
+Question:
+10 Where does James think that Oliver searches for the underclothes?
+
+Begin.
+    ","<reasoning>
+1. James entered the playroom, so he is present in the playroom.
+2. Oliver entered the playroom, so he is present in the playroom with James.
+3. Nathan entered the playroom, so he is present in the playroom with James and Oliver.
+4. The underclothes is in the bottle. All characters in the playroom (James, Oliver, and Nathan) know this information.
+5. Nathan exited the playroom. He is no longer present in the playroom.
+6. James moved the underclothes to the treasure_chest. Since Oliver is still in the playroom, he observes this action and knows the underclothes' new location.
+7. Oliver exited the playroom. He is no longer present in the playroom.
+8. James exited the playroom. He is no longer present in the playroom.
+9. Oliver entered the playroom. James is not in the playroom, so he does not know that Oliver has re-entered.
+
+Since James last saw Oliver in the playroom when he moved the underclothes to the treasure_chest, James would think that Oliver would search for the underclothes in the treasure_chest, as that is where he last saw them.
+</reasoning>
+<answer>treasure_chest</answer>",treasure_chest
+"1 Avery entered the bedroom.
+2 Charlotte entered the bedroom.
+3 The pineapple is in the suitcase.
+4 Isabella dislikes the strawberry
+5 Isabella entered the playroom.
+6 Avery likes the boots
+7 Avery exited the bedroom.
+8 Avery entered the bedroom.
+9 Charlotte moved the pineapple to the pantry.",10 Where was the pineapple at the beginning?,suitcase,memory,true_belief,"You are a highly analytical, detail-oriented assistant.
+    
+    Below is a series of observations, in the order they occurred, followed by a question.  Your job is to analyze the observations carefully and then answer the question. 
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, while in the presence of other characters, all other characters present will observe that movement
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occurred in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  You may explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Avery entered the bedroom.
+2 Charlotte entered the bedroom.
+3 The pineapple is in the suitcase.
+4 Isabella dislikes the strawberry
+5 Isabella entered the playroom.
+6 Avery likes the boots
+7 Avery exited the bedroom.
+8 Avery entered the bedroom.
+9 Charlotte moved the pineapple to the pantry.
+
+Question:
+10 Where was the pineapple at the beginning?
+
+Begin.
+    ","<reasoning>
+Observation 3 states that ""The pineapple is in the suitcase."" Since this observation occurs before any character interacts with the pineapple, we can assume that the pineapple was initially in the suitcase. Additionally, there are no observations of the pineapple being moved before observation 3, further supporting that the pineapple was in the suitcase at the beginning.
+</reasoning>
+<answer>suitcase</answer>",suitcase

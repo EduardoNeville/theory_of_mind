@@ -1,0 +1,545 @@
+actions,question,answer,question_type,story_type,gpt_prompt,gpt_response,gpt_answer
+"1 Emma entered the sunroom.
+2 Aiden entered the sunroom.
+3 Emma hates the jeans
+4 The melon is in the envelope.
+5 Aiden moved the melon to the bucket.
+6 Emma exited the sunroom.
+7 Emma hates the slacks
+8 Isla entered the pantry.",9 Where was the melon at the beginning?,envelope,memory,true_belief,"You are an AI that has developed theory of mind capabilities.
+    
+    Below is a series of observations, in the order they occured, followed by a question.
+
+Your job is to keep track of what each character knows, and believes the others to know, in order to correctly answer the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, that occured in the location where the character was last observed
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occured in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Be careful: the creators of this test want to prove that you don't have theory of mind, and at times they will try to trick you!  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Emma entered the sunroom.
+2 Aiden entered the sunroom.
+3 Emma hates the jeans
+4 The melon is in the envelope.
+5 Aiden moved the melon to the bucket.
+6 Emma exited the sunroom.
+7 Emma hates the slacks
+8 Isla entered the pantry.
+
+Question:
+9 Where was the melon at the beginning?
+
+Begin reasoning.
+    ","<reasoning>
+Let's analyze the observations step by step:
+1. Emma entered the sunroom. (Emma is in the sunroom)
+2. Aiden entered the sunroom. (Aiden is in the sunroom, both Emma and Aiden are in the sunroom)
+3. Emma hates the jeans. (This information is not relevant to the melon's location)
+4. The melon is in the envelope. (Since this is a simple object-is-in-location observation, all characters know this information, including Emma and Aiden)
+5. Aiden moved the melon to the bucket. (Aiden and Emma, who are both in the sunroom, are aware of this action)
+6. Emma exited the sunroom. (Emma is no longer in the sunroom)
+7. Emma hates the slacks. (This information is not relevant to the melon's location)
+8. Isla entered the pantry. (Isla is in the pantry, but this information is not relevant to the melon's location)
+
+Now, the question asks where the melon was at the beginning. From observation 4, we know that the melon was initially in the envelope. All characters are aware of this information since it is a simple object-is-in-location observation.
+</reasoning>
+<answer>envelope</answer>",envelope
+"1 Ava is in the garage.
+2 Noah entered the garage.
+3 The slacks is in the suitcase.
+4 Alexander entered the cellar.
+5 Noah moved the slacks to the bottle.
+6 Ava exited the garage.
+7 Noah exited the garage.
+8 Alexander exited the cellar.
+9 Ava entered the garage.",10 Where will Ava look for the slacks?,bottle,first_order_0_no_tom,second_order_false_belief,"You are an AI that has developed theory of mind capabilities.
+    
+    Below is a series of observations, in the order they occured, followed by a question.
+
+Your job is to keep track of what each character knows, and believes the others to know, in order to correctly answer the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, that occured in the location where the character was last observed
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occured in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Be careful: the creators of this test want to prove that you don't have theory of mind, and at times they will try to trick you!  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Ava is in the garage.
+2 Noah entered the garage.
+3 The slacks is in the suitcase.
+4 Alexander entered the cellar.
+5 Noah moved the slacks to the bottle.
+6 Ava exited the garage.
+7 Noah exited the garage.
+8 Alexander exited the cellar.
+9 Ava entered the garage.
+
+Question:
+10 Where will Ava look for the slacks?
+
+Begin reasoning.
+    ","<reasoning>
+1. Ava is in the garage, so she knows she is there.
+2. Noah entered the garage, so Ava knows Noah is in the garage with her.
+3. The slacks are in the suitcase. This information is known to all characters, so Ava knows the slacks are in the suitcase.
+4. Alexander entered the cellar. Ava is in the garage, so she is not aware of this observation.
+5. Noah moved the slacks to the bottle. This action occurred in the garage, so Ava is aware that Noah moved the slacks from the suitcase to the bottle.
+6. Ava exited the garage. She knows she left the garage.
+7. Noah exited the garage. Ava is not in the garage anymore, so she is not aware of this observation.
+8. Alexander exited the cellar. Ava is not in the cellar, so she is not aware of this observation.
+9. Ava entered the garage. She knows she is back in the garage.
+
+Ava's last known information about the slacks is that Noah moved them from the suitcase to the bottle while they were both in the garage. She is not aware of any other changes to the slacks' location since she left the garage. Therefore, she will look for the slacks in the bottle.
+</reasoning>
+<answer>bottle</answer>",bottle
+"1 Abigail entered the back_yard.
+2 Hannah entered the back_yard.
+3 The trousers is in the crate.
+4 Abigail moved the trousers to the suitcase.
+5 Benjamin entered the back_yard.
+6 Hannah exited the back_yard.
+7 Abigail exited the back_yard.
+8 Hannah entered the hallway.",9 Where will Hannah look for the trousers?,suitcase,first_order_1_no_tom,second_order_false_belief,"You are an AI that has developed theory of mind capabilities.
+    
+    Below is a series of observations, in the order they occured, followed by a question.
+
+Your job is to keep track of what each character knows, and believes the others to know, in order to correctly answer the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, that occured in the location where the character was last observed
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occured in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Be careful: the creators of this test want to prove that you don't have theory of mind, and at times they will try to trick you!  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Abigail entered the back_yard.
+2 Hannah entered the back_yard.
+3 The trousers is in the crate.
+4 Abigail moved the trousers to the suitcase.
+5 Benjamin entered the back_yard.
+6 Hannah exited the back_yard.
+7 Abigail exited the back_yard.
+8 Hannah entered the hallway.
+
+Question:
+9 Where will Hannah look for the trousers?
+
+Begin reasoning.
+    ","<reasoning>
+1. Abigail entered the back_yard. (Abigail is in the back_yard)
+2. Hannah entered the back_yard. (Hannah is in the back_yard, Abigail and Hannah are aware of each other's presence)
+3. The trousers is in the crate. (Abigail and Hannah know the trousers are in the crate)
+4. Abigail moved the trousers to the suitcase. (Abigail and Hannah know the trousers are now in the suitcase)
+5. Benjamin entered the back_yard. (Benjamin is in the back_yard, Abigail, Hannah, and Benjamin are aware of each other's presence)
+6. Hannah exited the back_yard. (Hannah is no longer in the back_yard, she is not aware of any further events in the back_yard)
+7. Abigail exited the back_yard. (Abigail is no longer in the back_yard, she is not aware of any further events in the back_yard)
+8. Hannah entered the hallway. (Hannah is in the hallway)
+
+At this point, Hannah's last known information about the trousers is that they were moved to the suitcase by Abigail while they were both in the back_yard. She has no reason to believe anything has changed since she left the back_yard.
+</reasoning>
+<answer>suitcase</answer>",suitcase
+"1 Mason entered the sunroom.
+2 Nathan entered the sunroom.
+3 The peach is in the box.
+4 Mason exited the sunroom.
+5 Carter loves the cherry
+6 Nathan moved the peach to the cupboard.
+7 Carter entered the sunroom.
+8 Nathan exited the sunroom.
+9 Carter exited the sunroom.
+10 Mason entered the sunroom.",11 Where does Nathan think that Mason searches for the peach?,box,second_order_1_tom,second_order_false_belief,"You are an AI that has developed theory of mind capabilities.
+    
+    Below is a series of observations, in the order they occured, followed by a question.
+
+Your job is to keep track of what each character knows, and believes the others to know, in order to correctly answer the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, that occured in the location where the character was last observed
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occured in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Be careful: the creators of this test want to prove that you don't have theory of mind, and at times they will try to trick you!  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Mason entered the sunroom.
+2 Nathan entered the sunroom.
+3 The peach is in the box.
+4 Mason exited the sunroom.
+5 Carter loves the cherry
+6 Nathan moved the peach to the cupboard.
+7 Carter entered the sunroom.
+8 Nathan exited the sunroom.
+9 Carter exited the sunroom.
+10 Mason entered the sunroom.
+
+Question:
+11 Where does Nathan think that Mason searches for the peach?
+
+Begin reasoning.
+    ","<reasoning>
+1. Mason entered the sunroom, and Nathan entered the sunroom. Both Mason and Nathan are now in the sunroom.
+2. The peach is in the box. All characters know this information.
+3. Mason exited the sunroom. Nathan knows that Mason left the sunroom.
+4. Carter loves the cherry. This information is not relevant to the question.
+5. Nathan moved the peach to the cupboard while he was in the sunroom. Nathan knows the peach is now in the cupboard, but Mason and Carter do not know this since they were not in the sunroom at that time.
+6. Carter entered the sunroom. Nathan knows that Carter entered the sunroom.
+7. Nathan exited the sunroom. Carter is now in the sunroom alone.
+8. Carter exited the sunroom. Nathan knows that Carter left the sunroom.
+9. Mason entered the sunroom. Nathan knows that Mason entered the sunroom.
+
+Since Mason was not present when Nathan moved the peach from the box to the cupboard, Nathan would think that Mason still believes the peach is in the box. Therefore, Nathan would think that Mason searches for the peach in the box.
+</reasoning>
+<answer>box</answer>",box
+"1 Lucas loves the shoes
+2 Lucas entered the back_yard.
+3 Abigail entered the back_yard.
+4 The belt is in the suitcase.
+5 Ethan loves the sweatshirt
+6 Lucas exited the back_yard.
+7 Abigail moved the belt to the drawer.",8 Where was the belt at the beginning?,suitcase,memory,false_belief,"You are an AI that has developed theory of mind capabilities.
+    
+    Below is a series of observations, in the order they occured, followed by a question.
+
+Your job is to keep track of what each character knows, and believes the others to know, in order to correctly answer the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, that occured in the location where the character was last observed
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occured in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Be careful: the creators of this test want to prove that you don't have theory of mind, and at times they will try to trick you!  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Lucas loves the shoes
+2 Lucas entered the back_yard.
+3 Abigail entered the back_yard.
+4 The belt is in the suitcase.
+5 Ethan loves the sweatshirt
+6 Lucas exited the back_yard.
+7 Abigail moved the belt to the drawer.
+
+Question:
+8 Where was the belt at the beginning?
+
+Begin reasoning.
+    ","<reasoning>
+Let's analyze the observations in order:
+
+1. Lucas loves the shoes: This observation doesn't provide any information about the belt.
+2. Lucas entered the back_yard: Lucas is now in the back_yard, but we don't know anything about the belt yet.
+3. Abigail entered the back_yard: Abigail is now in the back_yard with Lucas.
+4. The belt is in the suitcase: This observation tells us the initial location of the belt. All characters know this information since it's a simple object-is-in-location observation.
+5. Ethan loves the sweatshirt: This observation doesn't provide any information about the belt.
+6. Lucas exited the back_yard: Lucas is no longer in the back_yard.
+7. Abigail moved the belt to the drawer: Abigail moved the belt from the suitcase to the drawer. This action occurred in the back_yard, where Abigail was last observed. Lucas is not aware of this action since he had already exited the back_yard.
+
+The question asks for the location of the belt at the beginning. From observation 4, we know that the belt was initially in the suitcase.
+</reasoning>
+<answer>suitcase</answer>",suitcase
+"1 Elizabeth entered the lounge.
+2 Abigail entered the lounge.
+3 The eggplant is in the crate.
+4 Elizabeth exited the lounge.
+5 Abigail likes the apple
+6 Mila entered the lounge.
+7 Abigail moved the eggplant to the bathtub.",8 Where does Abigail think that Elizabeth searches for the eggplant?,bathtub,second_order_1_no_tom,false_belief,"You are an AI that has developed theory of mind capabilities.
+    
+    Below is a series of observations, in the order they occured, followed by a question.
+
+Your job is to keep track of what each character knows, and believes the others to know, in order to correctly answer the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, that occured in the location where the character was last observed
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occured in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Be careful: the creators of this test want to prove that you don't have theory of mind, and at times they will try to trick you!  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Elizabeth entered the lounge.
+2 Abigail entered the lounge.
+3 The eggplant is in the crate.
+4 Elizabeth exited the lounge.
+5 Abigail likes the apple
+6 Mila entered the lounge.
+7 Abigail moved the eggplant to the bathtub.
+
+Question:
+8 Where does Abigail think that Elizabeth searches for the eggplant?
+
+Begin reasoning.
+    ","<reasoning>
+1. Elizabeth entered the lounge. (Elizabeth is in the lounge)
+2. Abigail entered the lounge. (Abigail is in the lounge, and both Elizabeth and Abigail know each other's presence)
+3. The eggplant is in the crate. (Both Elizabeth and Abigail know the eggplant is in the crate)
+4. Elizabeth exited the lounge. (Elizabeth is no longer in the lounge, but Abigail knows she was there before)
+5. Abigail likes the apple. (This information is not relevant to the question)
+6. Mila entered the lounge. (Mila is in the lounge, and Abigail knows Mila is there)
+7. Abigail moved the eggplant to the bathtub. (Abigail knows the eggplant is now in the bathtub, but Elizabeth and Mila don't know this)
+
+At this point, Abigail knows that Elizabeth was in the lounge when the eggplant was in the crate. Since Elizabeth left before Abigail moved the eggplant to the bathtub, Abigail would think that Elizabeth would search for the eggplant in its last known location, which is the crate.
+</reasoning>
+<answer>crate</answer>",crate
+"1 Logan entered the cellar.
+2 Lucas entered the cellar.
+3 Logan hates the corn
+4 The green_pepper is in the treasure_chest.
+5 Logan exited the cellar.
+6 Lucas moved the green_pepper to the drawer.
+7 Logan loves the shirt",8 Where does Logan think that Lucas searches for the green_pepper?,treasure_chest,second_order_0_tom,false_belief,"You are an AI that has developed theory of mind capabilities.
+    
+    Below is a series of observations, in the order they occured, followed by a question.
+
+Your job is to keep track of what each character knows, and believes the others to know, in order to correctly answer the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, that occured in the location where the character was last observed
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occured in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Be careful: the creators of this test want to prove that you don't have theory of mind, and at times they will try to trick you!  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Logan entered the cellar.
+2 Lucas entered the cellar.
+3 Logan hates the corn
+4 The green_pepper is in the treasure_chest.
+5 Logan exited the cellar.
+6 Lucas moved the green_pepper to the drawer.
+7 Logan loves the shirt
+
+Question:
+8 Where does Logan think that Lucas searches for the green_pepper?
+
+Begin reasoning.
+    ","<reasoning>
+1. Logan entered the cellar. (Logan is in the cellar)
+2. Lucas entered the cellar. (Logan and Lucas are both in the cellar)
+3. Logan hates the corn. (Logan and Lucas both know this, as they are in the same location)
+4. The green_pepper is in the treasure_chest. (Logan and Lucas both know this, as they are in the same location)
+5. Logan exited the cellar. (Logan is no longer in the cellar, but Lucas remains there)
+6. Lucas moved the green_pepper to the drawer. (Only Lucas knows this, as Logan is not in the cellar anymore)
+7. Logan loves the shirt. (Only Logan knows this, as Lucas is still in the cellar)
+
+At this point, Logan knows that the green_pepper was in the treasure_chest when he left the cellar. He is not aware that Lucas moved the green_pepper to the drawer. Therefore, Logan would think that Lucas searches for the green_pepper in the treasure_chest.
+</reasoning>
+<answer>treasure_chest</answer>",treasure_chest
+"1 Nathan hates the onion
+2 James entered the staircase.
+3 Carter entered the staircase.
+4 The pear is in the drawer.
+5 Nathan entered the staircase.
+6 Carter exited the staircase.
+7 James moved the pear to the box.
+8 Nathan exited the staircase.
+9 James exited the staircase.
+10 Carter entered the staircase.",11 Where was the pear at the beginning?,drawer,memory,second_order_false_belief,"You are an AI that has developed theory of mind capabilities.
+    
+    Below is a series of observations, in the order they occured, followed by a question.
+
+Your job is to keep track of what each character knows, and believes the others to know, in order to correctly answer the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, that occured in the location where the character was last observed
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occured in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Be careful: the creators of this test want to prove that you don't have theory of mind, and at times they will try to trick you!  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Nathan hates the onion
+2 James entered the staircase.
+3 Carter entered the staircase.
+4 The pear is in the drawer.
+5 Nathan entered the staircase.
+6 Carter exited the staircase.
+7 James moved the pear to the box.
+8 Nathan exited the staircase.
+9 James exited the staircase.
+10 Carter entered the staircase.
+
+Question:
+11 Where was the pear at the beginning?
+
+Begin reasoning.
+    ","<reasoning>
+Let's analyze the observations step by step:
+
+1. Nathan hates the onion - This information is not relevant to the location of the pear.
+2. James entered the staircase - James is now in the staircase.
+3. Carter entered the staircase - Carter is now in the staircase.
+4. The pear is in the drawer - This is the initial location of the pear, and everyone knows this.
+5. Nathan entered the staircase - Nathan is now in the staircase.
+6. Carter exited the staircase - Carter is no longer in the staircase.
+7. James moved the pear to the box - James moved the pear while he was in the staircase. Nathan was also in the staircase at this time, so he knows that the pear was moved to the box. Carter was not in the staircase, so he doesn't know about this change.
+8. Nathan exited the staircase - Nathan is no longer in the staircase.
+9. James exited the staircase - James is no longer in the staircase.
+10. Carter entered the staircase - Carter is now in the staircase.
+
+The question asks for the location of the pear at the beginning. From observation 4, we know that the pear was initially in the drawer.
+</reasoning>
+<answer>drawer</answer>",drawer
+"1 Liam entered the basement.
+2 Benjamin entered the basement.
+3 The undershirt is in the bathtub.
+4 Benjamin exited the basement.
+5 Benjamin loves the sweater
+6 Benjamin entered the bedroom.
+7 Liam moved the undershirt to the box.",8 Where will Liam look for the undershirt?,box,first_order_0_no_tom,true_belief,"You are an AI that has developed theory of mind capabilities.
+    
+    Below is a series of observations, in the order they occured, followed by a question.
+
+Your job is to keep track of what each character knows, and believes the others to know, in order to correctly answer the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, that occured in the location where the character was last observed
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occured in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Be careful: the creators of this test want to prove that you don't have theory of mind, and at times they will try to trick you!  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Liam entered the basement.
+2 Benjamin entered the basement.
+3 The undershirt is in the bathtub.
+4 Benjamin exited the basement.
+5 Benjamin loves the sweater
+6 Benjamin entered the bedroom.
+7 Liam moved the undershirt to the box.
+
+Question:
+8 Where will Liam look for the undershirt?
+
+Begin reasoning.
+    ","<reasoning>
+1. Liam entered the basement. (Liam is in the basement)
+2. Benjamin entered the basement. (Liam and Benjamin are both in the basement)
+3. The undershirt is in the bathtub. (Liam and Benjamin both know the undershirt is in the bathtub)
+4. Benjamin exited the basement. (Liam is in the basement, Benjamin is not)
+5. Benjamin loves the sweater. (This information is not relevant to the question)
+6. Benjamin entered the bedroom. (Benjamin is in the bedroom, Liam is still in the basement)
+7. Liam moved the undershirt to the box. (Liam knows he moved the undershirt to the box, but Benjamin doesn't know this since he is in the bedroom)
+
+Since Liam moved the undershirt to the box, he knows its current location. Therefore, he will look for the undershirt in the box.
+</reasoning>
+<answer>box</answer>",box
+"1 Mila entered the front_yard.
+2 Ethan entered the front_yard.
+3 The celery is in the bucket.
+4 Ethan exited the front_yard.
+5 Mila moved the celery to the suitcase.
+6 Mila exited the front_yard.
+7 Ethan entered the den.",8 Where does Mila think that Ethan searches for the celery?,bucket,second_order_0_tom,second_order_false_belief,"You are an AI that has developed theory of mind capabilities.
+    
+    Below is a series of observations, in the order they occured, followed by a question.
+
+Your job is to keep track of what each character knows, and believes the others to know, in order to correctly answer the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time
+- if a character moves an object from one container to another, that occured in the location where the character was last observed
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occured in other locations
+- simple object-is-in-location observations (like ""the ball is in the basket"") are known to all characters
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Be careful: the creators of this test want to prove that you don't have theory of mind, and at times they will try to trick you!  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Mila entered the front_yard.
+2 Ethan entered the front_yard.
+3 The celery is in the bucket.
+4 Ethan exited the front_yard.
+5 Mila moved the celery to the suitcase.
+6 Mila exited the front_yard.
+7 Ethan entered the den.
+
+Question:
+8 Where does Mila think that Ethan searches for the celery?
+
+Begin reasoning.
+    ","<reasoning>
+1. Mila entered the front yard. (Mila is in the front yard)
+2. Ethan entered the front yard. (Mila knows Ethan is in the front yard)
+3. The celery is in the bucket. (Mila knows the celery is in the bucket)
+4. Ethan exited the front yard. (Mila knows Ethan left the front yard, and he didn't see the celery being moved)
+5. Mila moved the celery to the suitcase. (Mila knows the celery is now in the suitcase, but Ethan doesn't know this)
+6. Mila exited the front yard. (Mila is no longer in the front yard)
+7. Ethan entered the den. (Mila doesn't know Ethan entered the den)
+
+Mila knows that Ethan was in the front yard when the celery was in the bucket, but he left before she moved it to the suitcase. Since Mila doesn't know Ethan entered the den, she would think that Ethan would search for the celery in the last known location, which is the bucket.
+</reasoning>
+<answer>bucket</answer>",bucket

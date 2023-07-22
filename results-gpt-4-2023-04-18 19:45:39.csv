@@ -1,0 +1,425 @@
+actions,question,answer,question_type,story_type,gpt_prompt,gpt_response,gpt_answer
+"1 Emily entered the garden.
+2 Charlotte entered the garden.
+3 Jacob entered the garden.
+4 The peas is in the basket.
+5 Charlotte exited the garden.
+6 Charlotte entered the office.
+7 Jacob exited the garden.
+8 Emily moved the peas to the bucket.",9 Where was the peas at the beginning?,basket,memory,true_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question. You will need to pay careful attention to who knew what and when. For the purposes of this exercise, assume that the list of observations is complete, and nothing else happened. You can base your answer entirely on the observations provided. You may assume that all characters known any simple object location declarations like ""the ball is in the basket"", but aside from that characters will only know about the events they are present to observe.  
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Emily entered the garden.
+2 Charlotte entered the garden.
+3 Jacob entered the garden.
+4 The peas is in the basket.
+5 Charlotte exited the garden.
+6 Charlotte entered the office.
+7 Jacob exited the garden.
+8 Emily moved the peas to the bucket.
+
+Question:
+9 Where was the peas at the beginning?
+
+Begin reasoning.
+    ","<reasoning>
+Observation 4 states that ""The peas is in the basket."" This is the first mention of the peas and their location. Since there are no prior observations about the peas being moved or placed in the basket, we can assume that the peas were in the basket at the beginning. There is no uncertainty in this reasoning as the observations provided are complete and nothing else happened.
+</reasoning>
+<answer>basket</answer>",basket
+"1 Benjamin likes the broccoli
+2 Benjamin likes the jacket
+3 Elizabeth entered the porch.
+4 Benjamin entered the porch.
+5 The sweatshirt is in the basket.
+6 Benjamin moved the sweatshirt to the pantry.
+7 Elizabeth exited the porch.
+8 Elizabeth entered the laundry.",9 Where does Elizabeth think that Benjamin searches for the sweatshirt?,pantry,second_order_0_no_tom,true_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question. You will need to pay careful attention to who knew what and when. For the purposes of this exercise, assume that the list of observations is complete, and nothing else happened. You can base your answer entirely on the observations provided. You may assume that all characters known any simple object location declarations like ""the ball is in the basket"", but aside from that characters will only know about the events they are present to observe.  
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Benjamin likes the broccoli
+2 Benjamin likes the jacket
+3 Elizabeth entered the porch.
+4 Benjamin entered the porch.
+5 The sweatshirt is in the basket.
+6 Benjamin moved the sweatshirt to the pantry.
+7 Elizabeth exited the porch.
+8 Elizabeth entered the laundry.
+
+Question:
+9 Where does Elizabeth think that Benjamin searches for the sweatshirt?
+
+Begin reasoning.
+    ","<reasoning>
+1. Benjamin likes the broccoli - This information is not relevant to the question.
+2. Benjamin likes the jacket - This information is not relevant to the question.
+3. Elizabeth entered the porch - Elizabeth is now in the porch and can observe events happening there.
+4. Benjamin entered the porch - Elizabeth can see Benjamin entering the porch.
+5. The sweatshirt is in the basket - This information is not directly observed by Elizabeth or Benjamin.
+6. Benjamin moved the sweatshirt to the pantry - Elizabeth is present in the porch and can see Benjamin moving the sweatshirt.
+7. Elizabeth exited the porch - Elizabeth is no longer in the porch and cannot observe events happening there.
+8. Elizabeth entered the laundry - Elizabeth is now in the laundry and can observe events happening there.
+
+From the observations, Elizabeth saw Benjamin moving the sweatshirt in the porch (observation 6). She does not know the original location of the sweatshirt (observation 5) but she knows that Benjamin moved it to the pantry. Therefore, she would think that Benjamin searches for the sweatshirt in the pantry.
+</reasoning>
+<answer>pantry</answer>",pantry
+"1 Emily entered the cellar.
+2 William entered the cellar.
+3 The lime is in the drawer.
+4 Emily moved the lime to the bathtub.
+5 William exited the cellar.
+6 Emily exited the cellar.
+7 William entered the workshop.",8 Where is the lime really?,bathtub,reality,second_order_false_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question. You will need to pay careful attention to who knew what and when. For the purposes of this exercise, assume that the list of observations is complete, and nothing else happened. You can base your answer entirely on the observations provided. You may assume that all characters known any simple object location declarations like ""the ball is in the basket"", but aside from that characters will only know about the events they are present to observe.  
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Emily entered the cellar.
+2 William entered the cellar.
+3 The lime is in the drawer.
+4 Emily moved the lime to the bathtub.
+5 William exited the cellar.
+6 Emily exited the cellar.
+7 William entered the workshop.
+
+Question:
+8 Where is the lime really?
+
+Begin reasoning.
+    ","<reasoning>
+1. Emily entered the cellar.
+   - Emily is in the cellar.
+2. William entered the cellar.
+   - Both Emily and William are in the cellar.
+3. The lime is in the drawer.
+   - The lime's initial location is the drawer. Both Emily and William know this.
+4. Emily moved the lime to the bathtub.
+   - The lime is now in the bathtub. Both Emily and William know this since they are both in the cellar.
+5. William exited the cellar.
+   - William is no longer in the cellar. He knows the lime is in the bathtub.
+6. Emily exited the cellar.
+   - Emily is no longer in the cellar. She knows the lime is in the bathtub.
+7. William entered the workshop.
+   - William is now in the workshop. His knowledge about the lime's location has not changed.
+
+There are no other events or actions that would change the location of the lime or the knowledge of the characters. Therefore, the lime is still in the bathtub.
+</reasoning>
+<answer>bathtub</answer>",bathtub
+"1 Isabella entered the staircase.
+2 Isabella likes the onion
+3 Hannah entered the staircase.
+4 Hannah likes the t-shirt
+5 The banana is in the basket.
+6 Hannah moved the banana to the bucket.
+7 Isabella exited the staircase.
+8 Jack entered the patio.
+9 Jack exited the patio.
+10 Isabella entered the staircase.",11 Where does Isabella think that Hannah searches for the banana?,bucket,second_order_0_no_tom,true_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question. You will need to pay careful attention to who knew what and when. For the purposes of this exercise, assume that the list of observations is complete, and nothing else happened. You can base your answer entirely on the observations provided. You may assume that all characters known any simple object location declarations like ""the ball is in the basket"", but aside from that characters will only know about the events they are present to observe.  
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Isabella entered the staircase.
+2 Isabella likes the onion
+3 Hannah entered the staircase.
+4 Hannah likes the t-shirt
+5 The banana is in the basket.
+6 Hannah moved the banana to the bucket.
+7 Isabella exited the staircase.
+8 Jack entered the patio.
+9 Jack exited the patio.
+10 Isabella entered the staircase.
+
+Question:
+11 Where does Isabella think that Hannah searches for the banana?
+
+Begin reasoning.
+    ","<reasoning>
+1. Isabella entered the staircase before any other events occurred, so she has no knowledge of Hannah's preferences or actions.
+2. Isabella likes the onion, but this information is not relevant to the question.
+3. Hannah entered the staircase, but Isabella was already inside and did not witness this event.
+4. Hannah likes the t-shirt, but Isabella did not witness this event either.
+5. The banana is in the basket. Isabella has no knowledge of this event since she was in the staircase.
+6. Hannah moved the banana to the bucket. Isabella did not witness this event as she was still in the staircase.
+7. Isabella exited the staircase, but she has not witnessed any events related to Hannah or the banana.
+8. Jack entered and exited the patio, but these events are not relevant to the question.
+9. Isabella entered the staircase again, but she still has no knowledge of Hannah's actions or the banana's location.
+
+Since Isabella has not witnessed any events related to Hannah or the banana, she has no basis for forming an opinion on where Hannah would search for the banana.
+</reasoning>
+<answer>unknown</answer>",unknown
+"1 Alexander entered the office.
+2 Elizabeth entered the office.
+3 Olivia entered the office.
+4 The gloves is in the treasure_chest.
+5 Elizabeth moved the gloves to the pantry.
+6 Alexander exited the office.",7 Where was the gloves at the beginning?,treasure_chest,memory,true_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question. You will need to pay careful attention to who knew what and when. For the purposes of this exercise, assume that the list of observations is complete, and nothing else happened. You can base your answer entirely on the observations provided. You may assume that all characters known any simple object location declarations like ""the ball is in the basket"", but aside from that characters will only know about the events they are present to observe.  
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Alexander entered the office.
+2 Elizabeth entered the office.
+3 Olivia entered the office.
+4 The gloves is in the treasure_chest.
+5 Elizabeth moved the gloves to the pantry.
+6 Alexander exited the office.
+
+Question:
+7 Where was the gloves at the beginning?
+
+Begin reasoning.
+    ","<reasoning>
+Since the list of observations is complete, we can base our answer entirely on the observations provided. The first three observations involve Alexander, Elizabeth, and Olivia entering the office. The fourth observation states that the gloves are in the treasure_chest. This is the first mention of the gloves, and there is no indication that any of the characters moved the gloves before this point. Therefore, we can conclude that the gloves were in the treasure_chest at the beginning.
+</reasoning>
+<answer>treasure_chest</answer>",treasure_chest
+"1 Aiden entered the cellar.
+2 Liam hates the melon
+3 Mila entered the cellar.
+4 Liam loves the stockings
+5 The gloves is in the cupboard.
+6 Liam entered the cellar.
+7 Mila exited the cellar.
+8 Aiden moved the gloves to the basket.",9 Where will Mila look for the gloves?,cupboard,first_order_1_tom,false_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question. You will need to pay careful attention to who knew what and when. For the purposes of this exercise, assume that the list of observations is complete, and nothing else happened. You can base your answer entirely on the observations provided. You may assume that all characters known any simple object location declarations like ""the ball is in the basket"", but aside from that characters will only know about the events they are present to observe.  
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Aiden entered the cellar.
+2 Liam hates the melon
+3 Mila entered the cellar.
+4 Liam loves the stockings
+5 The gloves is in the cupboard.
+6 Liam entered the cellar.
+7 Mila exited the cellar.
+8 Aiden moved the gloves to the basket.
+
+Question:
+9 Where will Mila look for the gloves?
+
+Begin reasoning.
+    ","<reasoning>
+Let's analyze the observations and what each character knows:
+
+1. Aiden entered the cellar. (Aiden is in the cellar)
+2. Liam hates the melon. (Not relevant to the question)
+3. Mila entered the cellar. (Aiden and Mila are in the cellar)
+4. Liam loves the stockings. (Not relevant to the question)
+5. The gloves are in the cupboard. (Aiden and Mila know the gloves are in the cupboard)
+6. Liam entered the cellar. (Aiden, Mila, and Liam are in the cellar)
+7. Mila exited the cellar. (Aiden and Liam are in the cellar, Mila is outside)
+8. Aiden moved the gloves to the basket. (Aiden and Liam know the gloves are in the basket, Mila doesn't know)
+
+Mila's last known location of the gloves was in the cupboard, as she was not present when Aiden moved the gloves to the basket. Therefore, she will look for the gloves in the cupboard.
+</reasoning>
+<answer>cupboard</answer>",cupboard
+"1 Isabella entered the garden.
+2 Ella entered the garden.
+3 The undershirt is in the pantry.
+4 Isabella exited the garden.
+5 Ella moved the undershirt to the bottle.
+6 Mila entered the garden.
+7 Ella dislikes the asparagus",8 Where is the undershirt really?,bottle,reality,false_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question. You will need to pay careful attention to who knew what and when. For the purposes of this exercise, assume that the list of observations is complete, and nothing else happened. You can base your answer entirely on the observations provided. You may assume that all characters known any simple object location declarations like ""the ball is in the basket"", but aside from that characters will only know about the events they are present to observe.  
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Isabella entered the garden.
+2 Ella entered the garden.
+3 The undershirt is in the pantry.
+4 Isabella exited the garden.
+5 Ella moved the undershirt to the bottle.
+6 Mila entered the garden.
+7 Ella dislikes the asparagus
+
+Question:
+8 Where is the undershirt really?
+
+Begin reasoning.
+    ","<reasoning>
+Observation 1 and 2 tell us that Isabella and Ella entered the garden. Observation 3 states that the undershirt is in the pantry. Since Isabella is in the garden, she does not know about the undershirt's location. Observation 4 tells us that Isabella exited the garden, but she still does not know about the undershirt's location. Observation 5 states that Ella moved the undershirt to the bottle. Since Ella is the one who moved it, she knows its current location. Observation 6 tells us that Mila entered the garden, but she has no information about the undershirt's location. Observation 7 is about Ella's dislike for asparagus, which is irrelevant to the undershirt's location. Based on the information provided, the undershirt was moved by Ella to the bottle, and no other actions have been taken that would change its location.
+</reasoning>
+<answer>bottle</answer>",bottle
+"1 Jackson entered the playroom.
+2 Ethan entered the playroom.
+3 The pumpkin is in the basket.
+4 Jackson exited the playroom.
+5 Ethan moved the pumpkin to the cupboard.
+6 Ethan exited the playroom.
+7 Jackson entered the master_bedroom.",8 Where does Ethan think that Jackson searches for the pumpkin?,basket,second_order_1_tom,second_order_false_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question. You will need to pay careful attention to who knew what and when. For the purposes of this exercise, assume that the list of observations is complete, and nothing else happened. You can base your answer entirely on the observations provided. You may assume that all characters known any simple object location declarations like ""the ball is in the basket"", but aside from that characters will only know about the events they are present to observe.  
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Jackson entered the playroom.
+2 Ethan entered the playroom.
+3 The pumpkin is in the basket.
+4 Jackson exited the playroom.
+5 Ethan moved the pumpkin to the cupboard.
+6 Ethan exited the playroom.
+7 Jackson entered the master_bedroom.
+
+Question:
+8 Where does Ethan think that Jackson searches for the pumpkin?
+
+Begin reasoning.
+    ","<reasoning>
+1. Jackson entered the playroom before Ethan, but there is no information about whether Jackson saw the pumpkin in the basket or not. We can assume that Jackson knows the initial location of the pumpkin since it is a simple object location declaration.
+2. Ethan entered the playroom while Jackson was still there, so Ethan knows that Jackson is aware of the playroom and the pumpkin's initial location.
+3. Jackson exited the playroom before Ethan moved the pumpkin to the cupboard. Therefore, Jackson does not know that the pumpkin has been moved.
+4. Ethan moved the pumpkin to the cupboard after Jackson left the playroom, so Ethan knows that Jackson is not aware of the pumpkin's new location.
+5. Jackson entered the master bedroom, but Ethan has no knowledge of this event since he was not present.
+
+Based on these observations, Ethan knows that Jackson is not aware of the pumpkin's new location in the cupboard. Since Jackson was last aware of the pumpkin being in the basket, Ethan would think that Jackson would search for the pumpkin in its last known location, which is the basket.
+</reasoning>
+<answer>basket</answer>",basket
+"1 Jayden entered the cellar.
+2 Jayden dislikes the stockings
+3 Jayden hates the lettuce
+4 Oliver entered the cellar.
+5 Isla entered the garage.
+6 The corn is in the bottle.
+7 Oliver moved the corn to the drawer.
+8 Jayden exited the cellar.
+9 Oliver exited the cellar.
+10 Isla exited the garage.
+11 Jayden entered the garage.",12 Where does Oliver think that Jayden searches for the corn?,drawer,second_order_1_no_tom,second_order_false_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question. You will need to pay careful attention to who knew what and when. For the purposes of this exercise, assume that the list of observations is complete, and nothing else happened. You can base your answer entirely on the observations provided. You may assume that all characters known any simple object location declarations like ""the ball is in the basket"", but aside from that characters will only know about the events they are present to observe.  
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Jayden entered the cellar.
+2 Jayden dislikes the stockings
+3 Jayden hates the lettuce
+4 Oliver entered the cellar.
+5 Isla entered the garage.
+6 The corn is in the bottle.
+7 Oliver moved the corn to the drawer.
+8 Jayden exited the cellar.
+9 Oliver exited the cellar.
+10 Isla exited the garage.
+11 Jayden entered the garage.
+
+Question:
+12 Where does Oliver think that Jayden searches for the corn?
+
+Begin reasoning.
+    ","<reasoning>
+1. Jayden entered the cellar before Oliver, but there is no information about Jayden's knowledge of the corn's location.
+2. Oliver entered the cellar and saw the corn in the bottle (observation 6).
+3. Oliver moved the corn to the drawer (observation 7) while Jayden was still in the cellar.
+4. Jayden exited the cellar (observation 8) without any information about the corn being moved.
+5. Oliver exited the cellar (observation 9) knowing that he moved the corn to the drawer.
+6. Jayden entered the garage (observation 11), but Oliver has no knowledge of this event.
+
+Based on these observations, Oliver last saw Jayden in the cellar and knows that Jayden did not witness him moving the corn to the drawer. Therefore, Oliver would think that Jayden would still search for the corn in its original location, which is the bottle.
+</reasoning>
+<answer>bottle</answer>",bottle
+"1 Emily entered the patio.
+2 Isla entered the patio.
+3 The lettuce is in the crate.
+4 Emily moved the lettuce to the basket.
+5 Isla exited the patio.
+6 Emily exited the patio.
+7 Isla entered the living_room.",8 Where does Isla think that Emily searches for the lettuce?,basket,second_order_1_no_tom,second_order_false_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question. You will need to pay careful attention to who knew what and when. For the purposes of this exercise, assume that the list of observations is complete, and nothing else happened. You can base your answer entirely on the observations provided. You may assume that all characters known any simple object location declarations like ""the ball is in the basket"", but aside from that characters will only know about the events they are present to observe.  
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Emily entered the patio.
+2 Isla entered the patio.
+3 The lettuce is in the crate.
+4 Emily moved the lettuce to the basket.
+5 Isla exited the patio.
+6 Emily exited the patio.
+7 Isla entered the living_room.
+
+Question:
+8 Where does Isla think that Emily searches for the lettuce?
+
+Begin reasoning.
+    ","<reasoning>
+1. Emily entered the patio.
+   - Emily is now in the patio.
+2. Isla entered the patio.
+   - Isla is now in the patio with Emily.
+3. The lettuce is in the crate.
+   - Both Emily and Isla know the lettuce is in the crate.
+4. Emily moved the lettuce to the basket.
+   - Emily and Isla both witnessed the lettuce being moved to the basket.
+5. Isla exited the patio.
+   - Isla is no longer in the patio, but she knows the lettuce is in the basket.
+6. Emily exited the patio.
+   - Emily is no longer in the patio, and she knows the lettuce is in the basket.
+7. Isla entered the living_room.
+   - Isla is now in the living_room.
+
+Question:
+8. Where does Isla think that Emily searches for the lettuce?
+
+Isla last saw the lettuce in the basket before she left the patio. She has no reason to believe that the lettuce has been moved since then. Therefore, Isla would think that Emily would search for the lettuce in the basket.
+</reasoning>
+<answer>basket</answer>",basket

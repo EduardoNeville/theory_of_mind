@@ -1,0 +1,459 @@
+actions,question,answer,question_type,story_type,gpt_prompt,gpt_response,gpt_answer
+"1 Avery entered the garage.
+2 Mia entered the garage.
+3 The pajamas is in the suitcase.
+4 Avery exited the garage.
+5 Mia moved the pajamas to the box.",6 Where does Avery think that Mia searches for the pajamas?,suitcase,second_order_0_tom,false_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- all characters present are aware of any simple object location observations (like ""the ball is in the basket"")
+- characters are aware of all observations that occured where they are located, but are unaware of any observations that occured in other locations
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Avery entered the garage.
+2 Mia entered the garage.
+3 The pajamas is in the suitcase.
+4 Avery exited the garage.
+5 Mia moved the pajamas to the box.
+
+Question:
+6 Where does Avery think that Mia searches for the pajamas?
+
+Begin reasoning.
+    ","<reasoning>
+1. Avery entered the garage, so Avery is aware of the garage.
+2. Mia entered the garage, so Avery knows Mia is in the garage.
+3. The pajamas is in the suitcase. Since Avery is in the garage, Avery is aware of the pajamas' location.
+4. Avery exited the garage. Avery is no longer aware of events happening in the garage.
+5. Mia moved the pajamas to the box. Avery is not in the garage, so Avery is not aware of this action.
+
+Since Avery is not aware of Mia moving the pajamas to the box, Avery still believes the pajamas are in the suitcase.
+</reasoning>
+<answer>suitcase</answer>",suitcase
+"1 Oliver likes the cap
+2 Emily entered the patio.
+3 Oliver entered the patio.
+4 Oliver hates the banana
+5 The corn is in the cupboard.
+6 Emily exited the patio.
+7 Oliver moved the corn to the basket.",8 Where was the corn at the beginning?,cupboard,memory,false_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- all characters present are aware of any simple object location observations (like ""the ball is in the basket"")
+- characters are aware of all observations that occured where they are located, but are unaware of any observations that occured in other locations
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Oliver likes the cap
+2 Emily entered the patio.
+3 Oliver entered the patio.
+4 Oliver hates the banana
+5 The corn is in the cupboard.
+6 Emily exited the patio.
+7 Oliver moved the corn to the basket.
+
+Question:
+8 Where was the corn at the beginning?
+
+Begin reasoning.
+    ","<reasoning>
+The corn's initial location is mentioned in Action 5, which states ""The corn is in the cupboard."" Since there are no actions prior to this that involve the corn, we can conclude that the corn was in the cupboard at the beginning.
+</reasoning>
+<answer>cupboard</answer>",cupboard
+"1 Mila entered the laundry.
+2 Benjamin entered the laundry.
+3 The shoes is in the crate.
+4 Mila moved the shoes to the bucket.
+5 Benjamin exited the laundry.
+6 Mila exited the laundry.
+7 Benjamin entered the pantry.",8 Where will Mila look for the shoes?,bucket,first_order_0_no_tom,second_order_false_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- all characters present are aware of any simple object location observations (like ""the ball is in the basket"")
+- characters are aware of all observations that occured where they are located, but are unaware of any observations that occured in other locations
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Mila entered the laundry.
+2 Benjamin entered the laundry.
+3 The shoes is in the crate.
+4 Mila moved the shoes to the bucket.
+5 Benjamin exited the laundry.
+6 Mila exited the laundry.
+7 Benjamin entered the pantry.
+
+Question:
+8 Where will Mila look for the shoes?
+
+Begin reasoning.
+    ","<reasoning>
+Mila was present in the laundry when the shoes were observed to be in the crate (observation 3). She then moved the shoes to the bucket (observation 4). Benjamin entered the laundry before the shoes were moved (observation 2) and exited before Mila moved the shoes (observation 5). Therefore, Benjamin is not aware that the shoes were moved to the bucket. Since Mila moved the shoes herself, she knows the current location of the shoes. There is no uncertainty in this situation as Mila is aware of the shoes' location.
+</reasoning>
+<answer>bucket</answer>",bucket
+"1 Mason entered the lounge.
+2 Hunter entered the lounge.
+3 The celery is in the bottle.
+4 Hunter exited the lounge.
+5 Mason moved the celery to the bucket.
+6 Amelia entered the lounge.",7 Where will Mason look for the celery?,bucket,first_order_0_no_tom,false_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- all characters present are aware of any simple object location observations (like ""the ball is in the basket"")
+- characters are aware of all observations that occured where they are located, but are unaware of any observations that occured in other locations
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Mason entered the lounge.
+2 Hunter entered the lounge.
+3 The celery is in the bottle.
+4 Hunter exited the lounge.
+5 Mason moved the celery to the bucket.
+6 Amelia entered the lounge.
+
+Question:
+7 Where will Mason look for the celery?
+
+Begin reasoning.
+    ","<reasoning>
+Mason entered the lounge in action 1 and has remained there since. He was present when the observation was made that the celery is in the bottle (action 3). Later, Mason himself moved the celery to the bucket (action 5). Since Mason was the one who moved the celery, he is aware of its current location. There is no uncertainty in this situation, as Mason knows exactly where the celery is.
+</reasoning>
+<answer>bucket</answer>",bucket
+"1 Evelyn entered the garden.
+2 Evelyn hates the undershirt
+3 Benjamin entered the garden.
+4 The broccoli is in the bucket.
+5 Evelyn hates the cabbage
+6 Evelyn exited the garden.
+7 Benjamin moved the broccoli to the drawer.
+8 Benjamin exited the garden.
+9 Evelyn entered the garden.",10 Where is the broccoli really?,drawer,reality,second_order_false_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- all characters present are aware of any simple object location observations (like ""the ball is in the basket"")
+- characters are aware of all observations that occured where they are located, but are unaware of any observations that occured in other locations
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Evelyn entered the garden.
+2 Evelyn hates the undershirt
+3 Benjamin entered the garden.
+4 The broccoli is in the bucket.
+5 Evelyn hates the cabbage
+6 Evelyn exited the garden.
+7 Benjamin moved the broccoli to the drawer.
+8 Benjamin exited the garden.
+9 Evelyn entered the garden.
+
+Question:
+10 Where is the broccoli really?
+
+Begin reasoning.
+    ","<reasoning>
+1. Evelyn entered the garden, so she is aware of the garden's initial state.
+2. Evelyn hates the undershirt, but this information is not relevant to the location of the broccoli.
+3. Benjamin entered the garden, so he is also aware of the garden's initial state.
+4. The broccoli is in the bucket. Both Evelyn and Benjamin are aware of this since they are both in the garden.
+5. Evelyn hates the cabbage, but this information is not relevant to the location of the broccoli.
+6. Evelyn exited the garden. She is no longer aware of any changes happening in the garden.
+7. Benjamin moved the broccoli to the drawer. Evelyn is not aware of this change since she is not in the garden.
+8. Benjamin exited the garden. He is aware of the broccoli's location in the drawer.
+9. Evelyn entered the garden. She is not aware of the change in the broccoli's location since she was not present when Benjamin moved it.
+
+Since the observations are complete and nothing else happened, the broccoli is still in the drawer, as Benjamin moved it there and no other changes were observed.
+</reasoning>
+<answer>drawer</answer>",drawer
+"1 Jacob entered the den.
+2 Amelia entered the TV_room.
+3 Evelyn loves the pants
+4 Evelyn entered the den.
+5 The skirt is in the bucket.
+6 Jacob exited the den.
+7 Evelyn moved the skirt to the box.",8 Where does Jacob think that Evelyn searches for the skirt?,bucket,second_order_0_tom,false_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- all characters present are aware of any simple object location observations (like ""the ball is in the basket"")
+- characters are aware of all observations that occured where they are located, but are unaware of any observations that occured in other locations
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Jacob entered the den.
+2 Amelia entered the TV_room.
+3 Evelyn loves the pants
+4 Evelyn entered the den.
+5 The skirt is in the bucket.
+6 Jacob exited the den.
+7 Evelyn moved the skirt to the box.
+
+Question:
+8 Where does Jacob think that Evelyn searches for the skirt?
+
+Begin reasoning.
+    ","<reasoning>
+1. Jacob entered the den, so he is aware of the events happening in the den.
+2. Amelia entered the TV_room, which is irrelevant to the question.
+3. Evelyn loves the pants, but this information is not relevant to the question.
+4. Evelyn entered the den, so Jacob knows that Evelyn is in the den.
+5. The skirt is in the bucket, but Jacob has not been informed about this, as it was not mentioned in the den.
+6. Jacob exited the den, so he is no longer aware of the events happening in the den.
+7. Evelyn moved the skirt to the box, but Jacob is not aware of this event, as he has already left the den.
+
+Since Jacob is not aware of the skirt's location or that Evelyn moved it, he would think that Evelyn is searching for the skirt in the den, as that is the last place he saw her.
+</reasoning>
+<answer>den</answer>",den
+"1 Mila entered the basement.
+2 Mila hates the lettuce
+3 Jack entered the basement.
+4 The t-shirt is in the envelope.
+5 Jack exited the basement.
+6 Mila moved the t-shirt to the bottle.",7 Where was the t-shirt at the beginning?,envelope,memory,false_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- all characters present are aware of any simple object location observations (like ""the ball is in the basket"")
+- characters are aware of all observations that occured where they are located, but are unaware of any observations that occured in other locations
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Mila entered the basement.
+2 Mila hates the lettuce
+3 Jack entered the basement.
+4 The t-shirt is in the envelope.
+5 Jack exited the basement.
+6 Mila moved the t-shirt to the bottle.
+
+Question:
+7 Where was the t-shirt at the beginning?
+
+Begin reasoning.
+    ","<reasoning>
+The t-shirt's initial location is mentioned in observation 4, which states ""The t-shirt is in the envelope."" Since there are no observations before this that mention the t-shirt, we can conclude that the t-shirt was in the envelope at the beginning.
+</reasoning>
+<answer>envelope</answer>",envelope
+"1 Elizabeth entered the TV_room.
+2 Carter entered the TV_room.
+3 The green_pepper is in the bottle.
+4 Carter moved the green_pepper to the bathtub.
+5 Elizabeth exited the TV_room.
+6 Noah entered the hallway.
+7 Carter exited the TV_room.
+8 Elizabeth entered the TV_room.",9 Where does Elizabeth think that Carter searches for the green_pepper?,bathtub,second_order_0_no_tom,second_order_false_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- all characters present are aware of any simple object location observations (like ""the ball is in the basket"")
+- characters are aware of all observations that occured where they are located, but are unaware of any observations that occured in other locations
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Elizabeth entered the TV_room.
+2 Carter entered the TV_room.
+3 The green_pepper is in the bottle.
+4 Carter moved the green_pepper to the bathtub.
+5 Elizabeth exited the TV_room.
+6 Noah entered the hallway.
+7 Carter exited the TV_room.
+8 Elizabeth entered the TV_room.
+
+Question:
+9 Where does Elizabeth think that Carter searches for the green_pepper?
+
+Begin reasoning.
+    ","<reasoning>
+Let's analyze the observations and the knowledge of each character:
+
+1. Elizabeth entered the TV_room.
+   - Elizabeth is in the TV_room.
+
+2. Carter entered the TV_room.
+   - Elizabeth and Carter are both in the TV_room.
+
+3. The green_pepper is in the bottle.
+   - Elizabeth and Carter both know the green_pepper is in the bottle.
+
+4. Carter moved the green_pepper to the bathtub.
+   - Elizabeth saw Carter move the green_pepper to the bathtub.
+
+5. Elizabeth exited the TV_room.
+   - Elizabeth is no longer in the TV_room.
+
+6. Noah entered the hallway.
+   - This observation doesn't affect Elizabeth's knowledge.
+
+7. Carter exited the TV_room.
+   - Elizabeth doesn't know that Carter exited the TV_room, as she is not in the TV_room.
+
+8. Elizabeth entered the TV_room.
+   - Elizabeth is back in the TV_room.
+
+Now, let's answer the question: Where does Elizabeth think that Carter searches for the green_pepper?
+
+Elizabeth saw Carter move the green_pepper to the bathtub in observation 4. She doesn't know that Carter exited the TV_room in observation 7, as she was not in the TV_room at that time. Therefore, Elizabeth would think that Carter is still in the TV_room and would search for the green_pepper there.
+</reasoning>
+<answer>tv_room</answer>",tv_room
+"1 Ethan loves the persimmon
+2 Lily entered the dining_room.
+3 Lily hates the suit
+4 Ethan entered the dining_room.
+5 The raincoat is in the container.
+6 Ethan moved the raincoat to the pantry.
+7 Lily exited the dining_room.",8 Where does Lily think that Ethan searches for the raincoat?,pantry,second_order_0_no_tom,true_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- all characters present are aware of any simple object location observations (like ""the ball is in the basket"")
+- characters are aware of all observations that occured where they are located, but are unaware of any observations that occured in other locations
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Ethan loves the persimmon
+2 Lily entered the dining_room.
+3 Lily hates the suit
+4 Ethan entered the dining_room.
+5 The raincoat is in the container.
+6 Ethan moved the raincoat to the pantry.
+7 Lily exited the dining_room.
+
+Question:
+8 Where does Lily think that Ethan searches for the raincoat?
+
+Begin reasoning.
+    ","<reasoning>
+Let's analyze the observations and the information Lily has:
+
+1. Ethan loves the persimmon: This information is not relevant to the question.
+2. Lily entered the dining_room: Lily is now in the dining room.
+3. Lily hates the suit: This information is not relevant to the question.
+4. Ethan entered the dining_room: Lily is aware that Ethan is in the dining room since she is also there.
+5. The raincoat is in the container: Lily is aware of this information since it is a simple object location observation.
+6. Ethan moved the raincoat to the pantry: Lily is aware of this action since it occurred in the dining room where she is present.
+7. Lily exited the dining_room: Lily is no longer in the dining room.
+
+Now, let's answer the question: Where does Lily think that Ethan searches for the raincoat?
+
+Lily knows that the raincoat was initially in the container (observation 5) and that Ethan moved it to the pantry (observation 6). Therefore, Lily thinks that Ethan searches for the raincoat in the pantry.
+</reasoning>
+<answer>pantry</answer>",pantry
+"1 Owen entered the patio.
+2 Charlotte entered the patio.
+3 The shoes is in the treasure_chest.
+4 Owen moved the shoes to the crate.
+5 Charlotte exited the patio.
+6 Owen exited the patio.
+7 Charlotte likes the slacks
+8 Charlotte entered the patio.",9 Where is the shoes really?,crate,reality,second_order_false_belief,"The following text will list a series of observations, in the order they occured, followed by a question.
+
+You are an AI that has developed an emergent theory of mind, and your job is to demonstrate your theory of mind capabilities by correctly answering the question.
+
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- all characters present are aware of any simple object location observations (like ""the ball is in the basket"")
+- characters are aware of all observations that occured where they are located, but are unaware of any observations that occured in other locations
+- the list of observations is complete, and nothing else happened
+
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  Please explain any sources of uncertainty in your reasoning, but always give a one-word final answer with your best guess, using the specific vocabulary used in the observations.
+
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
+
+Actions:
+1 Owen entered the patio.
+2 Charlotte entered the patio.
+3 The shoes is in the treasure_chest.
+4 Owen moved the shoes to the crate.
+5 Charlotte exited the patio.
+6 Owen exited the patio.
+7 Charlotte likes the slacks
+8 Charlotte entered the patio.
+
+Question:
+9 Where is the shoes really?
+
+Begin reasoning.
+    ","<reasoning>
+1. Owen and Charlotte both entered the patio.
+2. The shoes were initially in the treasure_chest.
+3. Owen moved the shoes to the crate while Charlotte was present in the patio, so she is aware of this action.
+4. Both Owen and Charlotte exited the patio.
+5. Charlotte re-entered the patio, but there were no observations of her moving the shoes or anyone else entering the patio and moving the shoes.
+</reasoning>
+<answer>crate</answer>",crate

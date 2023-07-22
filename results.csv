@@ -1,0 +1,2 @@
+actions,question,answer,question_type,story_type, gpt_answer 
+1 Evelyn entered the kitchen. 2 Carter entered the kitchen. 3 Chloe entered the kitchen. 4 Evelyn loves the grapes 5 The broccoli is in the treasure_chest. 6 Chloe exited the kitchen. 7 Evelyn exited the kitchen. 8 Carter moved the broccoli to the drawer. 9 Carter dislikes the sweater 10 Carter exited the kitchen. 11 Evelyn entered the hall.,12 Where will Carter look for the broccoli?,drawer,first_order_1_no_tom,second_order_false_belief,drawer
