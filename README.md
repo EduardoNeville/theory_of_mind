@@ -2,7 +2,7 @@
 
 This Python script uses a series of situations from https://github.com/facebookresearch/ToMi and asks GPT to answer questions on them. 
 
-The scenarios and questions, along with descriptions are stored in data/test.trace and data/test.txt. 
+The scenarios and questions, along with descriptions are stored in `data/questions/test.trace` and `data/questions/test.txt`. 
 
 The script will select 400 random questions and ask ChatGPT to answer. 
 
