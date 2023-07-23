@@ -1,68 +1,72 @@
-# GPT Proof
+# GPT Theory of Mind
 
-This Python script uses a series of situations from https://github.com/facebookresearch/ToMi and asks GPT to answer questions on them. 
+Theory of mind (ToM) is the ability to attribute mental states to ourselves and others; accurately predicting other people’s beliefs, intents, desires and emotions is key to navigating everyday life. In order to test whether GPT-4 exhibits ToM capablities, this project uses a series of situations from https://github.com/facebookresearch/ToMi and asks GPT to answer questions on them. The scenarios and questions, along with descriptions are stored in `data/questions/test.trace` and `data/questions/test.txt`. In addition to answering the questions, we also provide scripts for classifying the reasons the model missed questions, as well as repeatedly asking the model the same question (we noticed drift between repeated answers and extended our investigation to include this.
 
-The scenarios and questions, along with descriptions are stored in `data/questions/test.trace` and `data/questions/test.txt`. 
-
-The script will select 400 random questions and ask ChatGPT to answer. 
-
-The prompt given to ChatGPT is in the following format:
-
+Here is an example of the kind of questions in the data set:
 ```
-  The following text will list a series of actions taken by different individuals, followed by a question about those actions. Please provide your answer to the question as a single lowercase word without punctuation. 
-  
-    Actions:
-    {list of actions}
-  
-    Question:
-    {question}
+1 Mia entered the master_bedroom.
+2 Elizabeth entered the staircase.
+3 Emily entered the staircase.
+4 The tangerine is in the box.
+5 Elizabeth exited the staircase.
+6 Emily likes the apple
+7 Emily moved the tangerine to the envelope.
+8 Elizabeth entered the master_bedroom.
+
+Q: Where will Elizabeth look for the tangerine?
+A: Box
 ```
+# Directory Layout
+## `scripts/main.py`
+This script runs the main question/answer loop. TWe select random questions and ask ChatGPT to answer. You can configure the number of questions and which version of the model you use at runtime using the CLI. To run the main research loop (using the same model we did), use the following command:
+`venv/bin/python scripts/main.py --n_questions 10 --model gpt-4-0314`
 
-
-For example:
-
+The prompt we arrived at is the following: 
 ```
-  The following text will list a series of actions taken by different individuals, followed by a question about those actions. Please provide your answer to the question as a single lowercase word without punctuation. 
-  
-  Actions:
-  1 Jackson entered the hall.
-  2 Chloe entered the hall.
-  3 The boots is in the bathtub.
-  4 Jackson exited the hall.
-  5 Jackson entered the dining_room.
-  6 Chloe moved the boots to the pantry.
-  
-  Question:
-  7 Where will Chloe look for the boots?
-```
+You are a highly analytical, detail-oriented assistant.
+    
+Below is a series of observations, in the order they occurred, followed by a question.  Your job is to analyze the observations carefully and then answer the question. 
 
-ChatGPT will send back a single word response for the answer. 
+For the purposes of this exercise, you may assume:
+- characters remain in the location where they were observed unless subsequently observed to have moved
+- characters know who else is in the same location as them at any given time, and know if anyone leaves that location
+- if a character moves an object from one container to another, while in the presence of other characters, all other characters present will observe that movement
+- characters are aware of all observations that occur in their location, but are unaware of any observations that occurred in other locations
+- simple object-is-in-location observations (like "the ball is in the basket") are known to all characters
+- the list of observations is complete, and nothing else happened
 
-Results are stored in results.csv. 
+Explain your reasoning carefully before giving a final answer as a single lowercase word without punctuation.  You may explain any sources of uncertainty in your reasoning, but always give the most specific possible one-word final answer with your best guess, using the specific vocabulary used in the observations.
 
-Values included are:
-```
-actions,question,answer,question_type,story_type, gpt_answer 
-```
+Use the format:
+<reasoning>[careful reasoning here]</reasoning>
+<answer>[one word answer here]</answer>
 
-Example result row would look like:
+Actions:
+{action_list}
 
-```
-1 Ella entered the bathroom. 2 Ella dislikes the shoes 3 Olivia entered the bathroom. 4 Ella loves the socks 5 Elizabeth entered the bathroom. 6 The socks is in the cupboard. 7 Ella moved the socks to the envelope. 8 Elizabeth exited the bathroom. 9 Olivia exited the bathroom. 10 Ella exited the bathroom. 11 Elizabeth entered the bathroom.,12 Where is the socks really?,envelope,reality,second_order_false_belief,envelope
+Question:
+{question.question}
 
+Begin.
 ```
 
-Here is an example CSV file on Google Sheets. This one was run with GPT 3.5 Turbo. 
-https://docs.google.com/spreadsheets/d/1kp9uF__tHxLX3kBqRzqyGazUpR0JzPE0Qn3Ic3D4FF4/edit?usp=sharing
+If you want to change it, simply edit the `build_prompt` method in `scripts/main.py`.
 
+GPT responds in XML with both a single word answer and the reasoning. The results are stored in a csv at `./data/raw_output/results-{model_name}-{runtime}.csv`. Values included are:
+```
+actions,question,answer,question_type,story_type,gpt_answer 
+```
 
-You will need to set the following variables in Replit Secrets to run on your own:
+Note that you will need to set the following variables in Replit Secrets to run on your own:
 ```
 OPENAI_ORGANIZATION
 OPENAI_API_KEY
 ```
+## `scripts/process_raw_output.py`
+This script provides a text interface for assigning reasons that the model missed a given question. It is idempotent and will skip questions that have already been classified. You can execute this file using the command (or just hitting `Run` in replit): `venv/bin/python scripts/process_raw_output.py`. This will create a new file, `./data/classified_results.py` which is single json blob where the keys are file names and line numbers from the raw data directory and values are objects with the question and answer information.
 
-And if you want to use GPT4, change line 13:
-```
-OPEN_AI_MODEL = "gpt-3.5-turbo"
-```
+## `scripts/repeat_prompt.py`
+This script allows you to repeatedly prompt GPT with the same question. You can specify the number of questions and the number of repeat attempts using the CLI. You can run the script like: `venv/bin/python scripts/repeat_prompt.py --n_questions 10 --n_reps 5`
+
+Note that the script will evenly split the samples across right and wrong answers so in the example above, 5 right questions and 5 wrong questions will each be called against the API 5 times.
+
