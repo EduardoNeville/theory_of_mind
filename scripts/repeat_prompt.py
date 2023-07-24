@@ -27,15 +27,13 @@ def get_keys(data: dict[str, dict], max_prompts: int) -> list[str]:
     random.shuffle(right_keys)
     random.shuffle(wrong_keys)
 
-    final_keys = []
     n_right = max_prompts // 2
     n_wrong = max_prompts - n_right
-    for right_key, wrong_key in zip(right_keys[:n_right],
-                                    wrong_keys[:n_wrong]):
-        final_keys.append(right_key)
-        final_keys.append(wrong_key)
 
-    return final_keys
+    right_key_sample = [key for key in right_keys[:n_right]]
+    wrong_key_sample = [key for key in right_keys[:n_wrong]]
+
+    return [*right_key_sample, *wrong_key_sample]
 
 
 def process_record(data: dict[str, dict], key: str, model: str, n_reps: int,
