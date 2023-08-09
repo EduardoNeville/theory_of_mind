@@ -1,5 +1,7 @@
 # GPT Theory of Mind
 
+_The easiest way to starting running the code yourself is to check out our [project on Replit](https://replit.com/@NathanLabenz/gpt-theory-of-mind-proof)_
+
 Theory of mind (ToM) is the ability to attribute mental states to ourselves and others; accurately predicting other people’s beliefs, intents, desires and emotions is key to navigating everyday life. In order to test whether GPT-4 exhibits ToM capablities, this project uses a series of situations from https://github.com/facebookresearch/ToMi and asks GPT to answer questions on them. The scenarios and questions, along with descriptions are stored in `data/questions/test.trace` and `data/questions/test.txt`. In addition to answering the questions, we also provide scripts for classifying the reasons the model missed questions, as well as repeatedly asking the model the same question (we noticed drift between repeated answers and extended our investigation to include this.
 
 Here is an example of the kind of questions in the data set:
@@ -18,7 +20,7 @@ A: Box
 ```
 # Directory Layout
 ## `scripts/main.py`
-This script runs the main question/answer loop. TWe select random questions and ask ChatGPT to answer. You can configure the number of questions and which version of the model you use at runtime using the CLI. To run the main research loop (using the same model we did), use the following command:
+This script runs the main question/answer loop. We select random questions and ask ChatGPT to answer. You can configure the number of questions and which version of the model you use at runtime using the CLI. To run the main research loop (using the same model we did), use the following command:
 `venv/bin/python scripts/main.py --n_questions 10 --model gpt-4-0314`
 
 The prompt we arrived at is the following: 
