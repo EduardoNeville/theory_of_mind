@@ -1,5 +1,6 @@
 # custom stuff
 data/raw_output/*
+!data/raw_output/raw_output
 data/classified_results.json
 data/accuracy_summary.txt
 .replit
