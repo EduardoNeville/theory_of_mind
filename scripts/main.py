@@ -259,12 +259,12 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "--mistral",
+        "--huggingface",
         type=bool,
         required=False,
         default=False,
-        help="Whether the model should be read from Mistral.",
+        help="Whether the model should be read from Huggingface.",
     )
 
     args = parser.parse_args()
-    main(args.n_questions, args.model, args.sleep, args.mistral)
+    main(args.n_questions, args.model, args.sleep, args.huggingface)
