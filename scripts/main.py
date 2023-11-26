@@ -16,8 +16,8 @@ import openai
 # openai.organization = os.environ["OPENAI_ORGANIZATION"]
 openai.api_key = os.environ["OPENAI_API_KEY"]
 
-OUTPUT_DIR = Path(f"{__file__}/../../data/raw_output")
-QUESTION_DIR = Path(f"{__file__}/../../data/questions")
+OUTPUT_DIR = Path(f"{os.path.dirname(__file__)}/../data/raw_output")
+QUESTION_DIR = Path(f"{os.path.dirname(__file__)}/../data/questions")
 
 
 @dataclass
