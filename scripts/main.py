@@ -194,7 +194,7 @@ def generate_openai_completion(model_name, prompt):
             "content": prompt,
         },
     ])
-    gpt_response = response["choices"][0]["message"]["content"]
+    gpt_response = response.choices[0].message.content
     print("GPT Response:", gpt_response)
     # parse out the answer from <answer> tags in gpt_response
     return parse_response(gpt_response)

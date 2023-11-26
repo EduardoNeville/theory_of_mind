@@ -75,7 +75,7 @@ def process_record(data: dict[str, dict], key: str, model: str, n_reps: int,
             },
         ])
 
-        gpt_response = response['choices'][0]['message']['content']
+        gpt_response = response.choices[0].message.content
         gpt_answer = gpt_response.split("<answer>")[1].split(
             "</answer>")[0].lower()
         answer = question.answer
