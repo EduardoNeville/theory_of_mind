@@ -11,7 +11,7 @@ import openai
 # OPEN AI API setup based on API Key and ORG ID
 # These are set in env variables - on Replit they are in secrets; written
 # to raise a key error if the values aren't set
-openai.organization = os.environ["OPENAI_ORGANIZATION"]
+# openai.organization = os.environ["OPENAI_ORGANIZATION"]
 openai.api_key = os.environ["OPENAI_API_KEY"]
 
 OUTPUT_DIR = Path('./data/raw_output')
