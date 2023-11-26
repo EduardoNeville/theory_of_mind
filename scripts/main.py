@@ -10,7 +10,10 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from openai import OpenAI
 
-client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+try:
+    client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+except:
+    client = {}
 
 # OPEN AI API setup based on API Key and ORG ID
 # These are set in env variables - on Replit they are in secrets; written
@@ -182,18 +185,20 @@ def main(n_questions: int, model_name: str, sleep_time: int, is_mistral: bool) -
 
 
 def generate_openai_completion(model_name, prompt):
-    response = client.chat.completions.create(model=model_name,
-    temperature=0,
-    messages=[
-        {
-            "role": "system",
-            "content": "You are a highly analytical, detail-oriented assistant.",
-        },
-        {
-            "role": "user",
-            "content": prompt,
-        },
-    ])
+    response = client.chat.completions.create(
+        model=model_name,
+        temperature=0,
+        messages=[
+            {
+                "role": "system",
+                "content": "You are a highly analytical, detail-oriented assistant.",
+            },
+            {
+                "role": "user",
+                "content": prompt,
+            },
+        ],
+    )
     gpt_response = response.choices[0].message.content
     print("GPT Response:", gpt_response)
     # parse out the answer from <answer> tags in gpt_response
