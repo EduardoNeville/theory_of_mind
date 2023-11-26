@@ -5,11 +5,15 @@ from argparse import ArgumentParser
 from pathlib import Path
 
 import openai
+from openai import OpenAI
+
+client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
 from main import (Question, build_prompt)
 
-openai.organization = os.environ["OPENAI_ORGANIZATION"]
-openai.api_key = os.environ["OPENAI_API_KEY"]
+# TODO: The 'openai.organization' option isn't read in the client API. You will need to pass it when you instantiate the client, e.g. 'OpenAI(organization=os.environ["OPENAI_ORGANIZATION"])'
+# openai.organization = os.environ["OPENAI_ORGANIZATION"]
+
 
 SKIP_REASONS = ("answer key is wrong", )
 
@@ -56,21 +60,20 @@ def process_record(data: dict[str, dict], key: str, model: str, n_reps: int,
     prompt = build_prompt(question)
 
     for _ in range(n_reps):
-        response = openai.ChatCompletion.create(
-            model=model,
-            temperature=0,
-            messages=[
-                {
-                    "role":
-                    "system",
-                    "content":
-                    "You are a highly analytical, detail-oriented assistant."
-                },
-                {
-                    "role": "user",
-                    "content": prompt,
-                },
-            ])
+        response = client.chat.completions.create(model=model,
+        temperature=0,
+        messages=[
+            {
+                "role":
+                "system",
+                "content":
+                "You are a highly analytical, detail-oriented assistant."
+            },
+            {
+                "role": "user",
+                "content": prompt,
+            },
+        ])
 
         gpt_response = response['choices'][0]['message']['content']
         gpt_answer = gpt_response.split("<answer>")[1].split(
