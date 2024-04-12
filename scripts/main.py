@@ -108,7 +108,7 @@ def get_questions(file_path: Path) -> list[tuple]:
     return questions
 
 
-def main(n_questions: int, model_name: str, sleep_time: int, is_mistral: bool) -> None:
+def main(n_questions: int, model_name: str, sleep_time: int, is_hugg: bool) -> None:
     """Runs the core loop for getting GPT model to run theory of mind tasks.
     Randomly samples questions from the available input then build prompt for
     the question, ask GPT and record answer in flat csv file. You can control
@@ -164,8 +164,8 @@ def main(n_questions: int, model_name: str, sleep_time: int, is_mistral: bool) -
 
         gpt_answer, gpt_response = (
             generate_openai_completion(model_name, prompt)
-            if not is_mistral
-            else generate_mistral_completion(model_name, prompt)
+            if not is_hugg
+            else generate_huggingface_completion(model_name, prompt)
         )
 
         csv_writer.writerow(
@@ -214,7 +214,7 @@ def parse_response(gpt_response):
     return gpt_answer, gpt_response
 
 
-def generate_mistral_completion(model_name, prompt):
+def generate_huggingface_completion(model_name, prompt):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForCausalLM.from_pretrained(model_name)
 
