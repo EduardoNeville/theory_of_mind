@@ -213,12 +213,11 @@ def parse_response(gpt_response):
     print("GPT Answer:", gpt_answer, end="\n")
     return gpt_answer, gpt_response
 
-
 def generate_huggingface_completion(model_name, prompt):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForCausalLM.from_pretrained(model_name)
 
-    model_inputs = tokenizer(prompt, return_tensors="pt")
+    model_inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
     generated_ids = model.generate(
         **model_inputs, max_length=tokenizer.model_max_length
